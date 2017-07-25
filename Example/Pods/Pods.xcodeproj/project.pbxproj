@@ -7,11 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		11936252813CE0482318279DF1358651 /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B5363801C0CA24DF1F9E481512B8C7 /* ReplaceMe.m */; };
 		3332AE98803608228367FCF907D02509 /* Pods-USeek_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CBEB1718A1A6831123640181C4B4F118 /* Pods-USeek_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4B2225F952DD7FD442CBAABEC44D44ED /* USeek-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 945801527BC9CCDABD9E634DD291D08A /* USeek-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		560A5B96D1DC229B0ACC23A3E770AAE0 /* Pods-USeek_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA14E60950F6384F07B2F767022B0EF /* Pods-USeek_Tests-dummy.m */; };
 		79288768C75B2018157138328A4B8BBF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		835E71E41F2749CA00160D77 /* USeek.h in Headers */ = {isa = PBXBuildFile; fileRef = 835E71D71F2749CA00160D77 /* USeek.h */; };
+		835E71E51F2749CA00160D77 /* USeek.m in Sources */ = {isa = PBXBuildFile; fileRef = 835E71D81F2749CA00160D77 /* USeek.m */; };
+		835E71E61F2749CA00160D77 /* USeekPlayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 835E71D91F2749CA00160D77 /* USeekPlayerView.h */; };
+		835E71E71F2749CA00160D77 /* USeekPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 835E71DA1F2749CA00160D77 /* USeekPlayerView.m */; };
+		835E71E81F2749CA00160D77 /* USeekPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 835E71DC1F2749CA00160D77 /* USeekPlayerViewController.h */; };
+		835E71E91F2749CA00160D77 /* USeekPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 835E71DD1F2749CA00160D77 /* USeekPlayerViewController.m */; };
+		835E71EA1F2749CA00160D77 /* USeekUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 835E71E01F2749CA00160D77 /* USeekUtils.h */; };
+		835E71EB1F2749CA00160D77 /* USeekUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 835E71E11F2749CA00160D77 /* USeekUtils.m */; };
+		835E71EC1F2749CA00160D77 /* USeekWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = 835E71E21F2749CA00160D77 /* USeekWebView.h */; };
+		835E71ED1F2749CA00160D77 /* USeekWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 835E71E31F2749CA00160D77 /* USeekWebView.m */; };
 		B8B1FE71FDA68F04ACD149B195658028 /* USeek-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AE76A3E21BF7D08538E1CF0BB2DFCE60 /* USeek-dummy.m */; };
 		BA0574419232673250BB794118413A97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -29,7 +38,6 @@
 /* Begin PBXFileReference section */
 		2575888C54796E666996E5E55BB9FB84 /* Pods-USeek_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-USeek_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		31FBD5BF7AEE3AD3FDA42C6CEF352692 /* USeek.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = USeek.xcconfig; sourceTree = "<group>"; };
-		38B5363801C0CA24DF1F9E481512B8C7 /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ReplaceMe.m; sourceTree = "<group>"; };
 		3EB2111C377EFE1630E440BFBE0C2957 /* Pods-USeek_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-USeek_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		4BD2F94C66AB6AD0862AFA549F59E9B6 /* Pods-USeek_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-USeek_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		617B4634598C95E19FDF43000655C904 /* Pods-USeek_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-USeek_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -37,16 +45,30 @@
 		6EA14E60950F6384F07B2F767022B0EF /* Pods-USeek_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-USeek_Tests-dummy.m"; sourceTree = "<group>"; };
 		6F9B797D46D1C4042CA2982D81D4D98F /* USeek-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "USeek-prefix.pch"; sourceTree = "<group>"; };
 		79E42BE351980926930B16830E507047 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		835E71D71F2749CA00160D77 /* USeek.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USeek.h; sourceTree = "<group>"; };
+		835E71D81F2749CA00160D77 /* USeek.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USeek.m; sourceTree = "<group>"; };
+		835E71D91F2749CA00160D77 /* USeekPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USeekPlayerView.h; sourceTree = "<group>"; };
+		835E71DA1F2749CA00160D77 /* USeekPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USeekPlayerView.m; sourceTree = "<group>"; };
+		835E71DB1F2749CA00160D77 /* USeekPlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = USeekPlayerView.xib; sourceTree = "<group>"; };
+		835E71DC1F2749CA00160D77 /* USeekPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USeekPlayerViewController.h; sourceTree = "<group>"; };
+		835E71DD1F2749CA00160D77 /* USeekPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USeekPlayerViewController.m; sourceTree = "<group>"; };
+		835E71DE1F2749CA00160D77 /* USeekPlayerViewController~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "USeekPlayerViewController~ipad.xib"; sourceTree = "<group>"; };
+		835E71DF1F2749CA00160D77 /* USeekPlayerViewController~iphone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "USeekPlayerViewController~iphone.xib"; sourceTree = "<group>"; };
+		835E71E01F2749CA00160D77 /* USeekUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USeekUtils.h; sourceTree = "<group>"; };
+		835E71E11F2749CA00160D77 /* USeekUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USeekUtils.m; sourceTree = "<group>"; };
+		835E71E21F2749CA00160D77 /* USeekWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USeekWebView.h; sourceTree = "<group>"; };
+		835E71E31F2749CA00160D77 /* USeekWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USeekWebView.m; sourceTree = "<group>"; };
+		835E71EF1F2749E600160D77 /* USeekAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = USeekAssets.xcassets; path = Assets/USeekAssets.xcassets; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		945801527BC9CCDABD9E634DD291D08A /* USeek-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "USeek-umbrella.h"; sourceTree = "<group>"; };
 		9A31953DB5E05167F103E0D4AD591B5A /* Pods-USeek_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-USeek_Tests-resources.sh"; sourceTree = "<group>"; };
 		AE76A3E21BF7D08538E1CF0BB2DFCE60 /* USeek-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "USeek-dummy.m"; sourceTree = "<group>"; };
-		C19FEF894F6594D0E8B5F769A94616FF /* USeek.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = USeek.modulemap; sourceTree = "<group>"; };
+		C19FEF894F6594D0E8B5F769A94616FF /* USeek.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = USeek.modulemap; sourceTree = "<group>"; };
 		CBEB1718A1A6831123640181C4B4F118 /* Pods-USeek_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-USeek_Tests-umbrella.h"; sourceTree = "<group>"; };
-		CF56E19023C2A898832E81ADACBB230B /* USeek.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = USeek.framework; path = USeek.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E82F8F08A1295867597A42B012EA74AE /* Pods_USeek_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_USeek_Tests.framework; path = "Pods-USeek_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF56E19023C2A898832E81ADACBB230B /* USeek.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = USeek.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E82F8F08A1295867597A42B012EA74AE /* Pods_USeek_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_USeek_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F00AF1F7E9B763450A28ACB33FD79294 /* Pods-USeek_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-USeek_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F535C5BF17CB1C7F2DAF642600CF7240 /* Pods-USeek_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-USeek_Tests.modulemap"; sourceTree = "<group>"; };
+		F535C5BF17CB1C7F2DAF642600CF7240 /* Pods-USeek_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-USeek_Tests.modulemap"; sourceTree = "<group>"; };
 		FB3B1195A96763F5A93FAD0266CB6350 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,9 +154,20 @@
 		7B537259F9C924BB8EB7EC4A66DCF608 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				38B5363801C0CA24DF1F9E481512B8C7 /* ReplaceMe.m */,
+				835E71D71F2749CA00160D77 /* USeek.h */,
+				835E71D81F2749CA00160D77 /* USeek.m */,
+				835E71D91F2749CA00160D77 /* USeekPlayerView.h */,
+				835E71DA1F2749CA00160D77 /* USeekPlayerView.m */,
+				835E71DB1F2749CA00160D77 /* USeekPlayerView.xib */,
+				835E71DC1F2749CA00160D77 /* USeekPlayerViewController.h */,
+				835E71DD1F2749CA00160D77 /* USeekPlayerViewController.m */,
+				835E71DE1F2749CA00160D77 /* USeekPlayerViewController~ipad.xib */,
+				835E71DF1F2749CA00160D77 /* USeekPlayerViewController~iphone.xib */,
+				835E71E01F2749CA00160D77 /* USeekUtils.h */,
+				835E71E11F2749CA00160D77 /* USeekUtils.m */,
+				835E71E21F2749CA00160D77 /* USeekWebView.h */,
+				835E71E31F2749CA00160D77 /* USeekWebView.m */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -149,12 +182,20 @@
 			);
 			sourceTree = "<group>";
 		};
+		835E71EE1F2749DD00160D77 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				835E71EF1F2749E600160D77 /* USeekAssets.xcassets */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
 		B843C343F28BDD23BE2940E6431D4A75 /* USeek */ = {
 			isa = PBXGroup;
 			children = (
+				835E71EE1F2749DD00160D77 /* Assets */,
 				7B537259F9C924BB8EB7EC4A66DCF608 /* Classes */,
 			);
-			name = USeek;
 			path = USeek;
 			sourceTree = "<group>";
 		};
@@ -197,7 +238,12 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				835E71E41F2749CA00160D77 /* USeek.h in Headers */,
+				835E71EA1F2749CA00160D77 /* USeekUtils.h in Headers */,
+				835E71EC1F2749CA00160D77 /* USeekWebView.h in Headers */,
 				3332AE98803608228367FCF907D02509 /* Pods-USeek_Tests-umbrella.h in Headers */,
+				835E71E81F2749CA00160D77 /* USeekPlayerViewController.h in Headers */,
+				835E71E61F2749CA00160D77 /* USeekPlayerView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +318,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				560A5B96D1DC229B0ACC23A3E770AAE0 /* Pods-USeek_Tests-dummy.m in Sources */,
+				835E71EB1F2749CA00160D77 /* USeekUtils.m in Sources */,
+				835E71E51F2749CA00160D77 /* USeek.m in Sources */,
+				835E71ED1F2749CA00160D77 /* USeekWebView.m in Sources */,
+				835E71E71F2749CA00160D77 /* USeekPlayerView.m in Sources */,
+				835E71E91F2749CA00160D77 /* USeekPlayerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,7 +330,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11936252813CE0482318279DF1358651 /* ReplaceMe.m in Sources */,
 				B8B1FE71FDA68F04ACD149B195658028 /* USeek-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
