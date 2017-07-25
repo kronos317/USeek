@@ -1,0 +1,6 @@
+use_frameworks!
+target 'USeek_Tests' do
+  pod 'USeek', :path => '../'
+  
+  
+end
