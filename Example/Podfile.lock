@@ -1,0 +1,16 @@
+PODS:
+  - USeek (0.1.0)
+
+DEPENDENCIES:
+  - USeek (from `../`)
+
+EXTERNAL SOURCES:
+  USeek:
+    :path: ../
+
+SPEC CHECKSUMS:
+  USeek: ae52c7890e322d2e754634865226f987b87dba1f
+
+PODFILE CHECKSUM: af6061f087f36a883f030a9a0cbc3adaa0d683bc
+
+COCOAPODS: 1.2.1
