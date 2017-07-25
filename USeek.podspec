@@ -30,11 +30,11 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'USeek/Classes/**/*'
+  s.source_files = 'USeek/Classes/**/*.{h,m}'
   
-  # s.resource_bundles = {
-  #   'USeek' => ['USeek/Assets/*.png']
-  # }
+  s.resource_bundles = {
+    'USeek' => ['USeek/Assets/**/*.png', 'USeek/Classes/**/*.xib']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
