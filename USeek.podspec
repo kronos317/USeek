@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'USeek'
-  s.version          = '0.1.5'
+  s.version          = '0.1.6'
   s.summary          = 'USeek Library'
 
 # This description is used to generate tags and improve search results.
@@ -32,9 +32,10 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'USeek/Classes/**/*.{h,m}'
   
-  s.resource_bundles = {
-    'USeek' => ['USeek/Assets/**/*', 'USeek/Classes/**/*.xib']
-  }
+  #s.resource_bundles = {
+  #  'USeek' => ['USeek/Assets/**/*', 'USeek/Classes/**/*.xib']
+  #}
+  s.resources = ['USeek/Assets/**/*', 'USeek/Classes/**/*.xib']
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
