@@ -18,7 +18,6 @@
 - (void) useekPlayerViewControllerDidFinishLoad: (USeekPlayerViewController *) playerViewController;
 - (void) useekPlayerViewController: (USeekPlayerViewController *) playerViewController didFailWithError: (NSError *) error;
 - (void) useekPlayerViewControllerDidClose: (USeekPlayerViewController *) playerViewController;
-- (void) useekPlayerViewController: (USeekPlayerViewController *) playerViewController didPlaybackFinish: (BOOL) finished WithPoints: (int) points;
 
 @end
 

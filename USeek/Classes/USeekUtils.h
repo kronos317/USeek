@@ -19,17 +19,27 @@ typedef enum _ENUM_VIDEOLOADSTATUS{
 
 @interface USeekPlaybackResultDataModel : NSObject
 
+@property (strong, nonatomic) NSString *publisherId;
 @property (strong, nonatomic) NSString *videoId;
 @property (strong, nonatomic) NSString *userId;
 @property (assign, atomic) BOOL finished;
 @property (assign, atomic) int points;
+
+- (instancetype) initWithDictionary: (NSDictionary *) dictionary;
+- (void) setWithDictionary: (NSDictionary *) resultDictionary;
 
 @end
 
 @interface USeekUtils : NSObject
 
 + (BOOL) validateString: (NSString *) candidate;
++ (NSString *) refineNSString: (NSString *)originalString;
++ (int) refineInt:(id)value DefaultValue: (int) defValue;
++ (BOOL) refineBool:(id)value DefaultValue: (BOOL) defValue;
+
 + (BOOL) validateUrl: (NSString *) candidate;
-+ (USeekPlaybackResultDataModel *) parsePlaybackResultWithURLRequest: (NSURLRequest *) request;
+
++ (void) requestGET: (NSString *) urlString Params: (NSDictionary *) params Success: (void (^) (NSDictionary * dict)) success Failure: (void (^) (NSError *error)) failure;
++ (void) requestPOST: (NSString *) urlString Params: (NSDictionary *) params Success: (void (^) (NSDictionary * dict)) success Failure: (void (^) (NSError *error)) failure;
 
 @end

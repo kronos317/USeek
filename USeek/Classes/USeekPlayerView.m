@@ -112,20 +112,6 @@
 
 #pragma mark - UIWebViewDelegate
 
-- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
-    USeekPlaybackResultDataModel *result = [USeekUtils parsePlaybackResultWithURLRequest:request];
-    if (result != nil){
-        if ([self.webView.videoId isEqualToString:result.videoId] == YES &&
-            ([self.webView.userId isEqualToString:result.userId] == YES)){
-            USEEKLOG(@"USeekWebView didPlaybackFinish");
-            if (self.delegate && [self.delegate respondsToSelector:@selector(useekPlayerView:didPlaybackFinish:WithPoints:)] == YES){
-                [self.delegate useekPlayerView:self didPlaybackFinish:result.finished WithPoints:result.points];
-            }
-        }
-    }
-    return YES;
-}
-
 - (void)webViewDidStartLoad:(UIWebView *)webView{
     USEEKLOG(@"USeekWebView didStartLoad");
     if (self.enumStatus == USEEKENUM_VIDEO_LOADSTATUS_NONE){

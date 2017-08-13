@@ -156,6 +156,10 @@
 			children = (
 				835E71D71F2749CA00160D77 /* USeek.h */,
 				835E71D81F2749CA00160D77 /* USeek.m */,
+				835E71E01F2749CA00160D77 /* USeekUtils.h */,
+				835E71E11F2749CA00160D77 /* USeekUtils.m */,
+				835E71E21F2749CA00160D77 /* USeekWebView.h */,
+				835E71E31F2749CA00160D77 /* USeekWebView.m */,
 				835E71D91F2749CA00160D77 /* USeekPlayerView.h */,
 				835E71DA1F2749CA00160D77 /* USeekPlayerView.m */,
 				835E71DB1F2749CA00160D77 /* USeekPlayerView.xib */,
@@ -163,10 +167,6 @@
 				835E71DD1F2749CA00160D77 /* USeekPlayerViewController.m */,
 				835E71DE1F2749CA00160D77 /* USeekPlayerViewController~ipad.xib */,
 				835E71DF1F2749CA00160D77 /* USeekPlayerViewController~iphone.xib */,
-				835E71E01F2749CA00160D77 /* USeekUtils.h */,
-				835E71E11F2749CA00160D77 /* USeekUtils.m */,
-				835E71E21F2749CA00160D77 /* USeekWebView.h */,
-				835E71E31F2749CA00160D77 /* USeekWebView.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";

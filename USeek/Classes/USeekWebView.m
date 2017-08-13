@@ -10,15 +10,19 @@
 #import "USeek.h"
 #import "USeekUtils.h"
 
+@interface USeekWebView ()
+
+@end
+
 @implementation USeekWebView
 
 /*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
+ // Only override drawRect: if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ - (void)drawRect:(CGRect)rect {
+ // Drawing code
+ }
+ */
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder{
     if ((self = [super initWithCoder:aDecoder])){
@@ -70,6 +74,7 @@
     self.mediaPlaybackRequiresUserAction = NO;
     self.opaque = NO;
     self.backgroundColor = [UIColor clearColor];
+    
     [self loadRequest:[NSURLRequest requestWithURL:url]];
 }
 
