@@ -18,12 +18,12 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+This Pod library is designed to help developers use USeek Library easily.
                        DESC
 
   s.homepage         = 'https://github.com/chrislin89/USeek'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.license          = { :type => 'USEEK', :file => 'LICENSE' }
   s.author           = { 'chrislin89' => 'chrislin.317@hotmail.com' }
   s.source           = { :git => 'https://github.com/chrislin89/USeek.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
@@ -31,10 +31,6 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'USeek/Classes/**/*.{h,m}'
-  
-  #s.resource_bundles = {
-  #  'USeek' => ['USeek/Assets/**/*', 'USeek/Classes/**/*.xib']
-  #}
   s.resources = ['USeek/Assets/**/*', 'USeek/Classes/**/*.xib']
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
