@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'USeek'
-  s.version          = '0.1.6'
+  s.version          = '0.1.9'
   s.summary          = 'USeek Library'
 
 # This description is used to generate tags and improve search results.
