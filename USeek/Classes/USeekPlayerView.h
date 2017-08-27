@@ -26,7 +26,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelLoadingTitle;
 
 - (BOOL) validateConfiguration;
-- (void) loadVideoWithVideoId: (NSString *) videoId UserId: (NSString *) userId;
+- (void) loadVideoWithGameId: (NSString *) gameId UserId: (NSString *) userId;
 
 @property (weak, nonatomic) id<USeekPlayerViewDelegate> delegate;
 

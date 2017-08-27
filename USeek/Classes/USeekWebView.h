@@ -11,7 +11,7 @@
 
 @interface USeekWebView : UIWebView
 
-@property (strong, nonatomic) NSString *videoId;
+@property (strong, nonatomic) NSString *gameId;
 @property (strong, nonatomic) NSString *userId;
 
 - (BOOL) validateConfiguration;

@@ -27,7 +27,7 @@
 
 - (void) setCloseButtonHidden: (BOOL) hidden;
 - (BOOL) validateConfiguration;
-- (void) loadVideoWithVideoId: (NSString *) videoId UserId: (NSString *) userId;
+- (void) loadVideoWithGameId: (NSString *) gameId UserId: (NSString *) userId;
 
 @property (weak, nonatomic) id<USeekPlayerViewControllerDelegate> delegate;
 

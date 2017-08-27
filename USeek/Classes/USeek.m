@@ -37,7 +37,7 @@
 
 #pragma mark - Request
 
-- (void) requestPointsWithVideoId: (NSString *) videoId UserId: (NSString *) userId Success: (void (^) (int points)) success Failure: (void (^) (NSError *error)) failure{
+- (void) requestPointsWithGameId: (NSString *) gameId UserId: (NSString *) userId Success: (void (^) (int points)) success Failure: (void (^) (NSError *error)) failure{
     if ([USeekUtils validateString:self.publisherId] == NO){
         NSDictionary *userInfo = @{
                                    NSLocalizedDescriptionKey: NSLocalizedString(@"Operation was cancelled due to invalid publisher id.", nil),
@@ -50,11 +50,11 @@
         }
         return;
     }
-    if ([USeekUtils validateString:videoId] == NO){
+    if ([USeekUtils validateString:gameId] == NO){
         NSDictionary *userInfo = @{
-                                   NSLocalizedDescriptionKey: NSLocalizedString(@"Operation was cancelled due to invalid video id.", nil),
-                                   NSLocalizedFailureReasonErrorKey: NSLocalizedString(@"Operation was cancelled due to invalid video id.", nil),
-                                   NSLocalizedRecoverySuggestionErrorKey: NSLocalizedString(@"Have you tried sending valid video id?", nil)
+                                   NSLocalizedDescriptionKey: NSLocalizedString(@"Operation was cancelled due to invalid game id.", nil),
+                                   NSLocalizedFailureReasonErrorKey: NSLocalizedString(@"Operation was cancelled due to invalid game id.", nil),
+                                   NSLocalizedRecoverySuggestionErrorKey: NSLocalizedString(@"Have you tried sending valid game id?", nil)
                                    };
         NSError *error = [NSError errorWithDomain:NSURLErrorDomain code:kCFURLErrorBadServerResponse userInfo:userInfo];
         if (failure){
@@ -65,12 +65,15 @@
     
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
     [params setObject:[USeekUtils refineNSString:self.publisherId] forKey:@"publisherId"];
-    [params setObject:[USeekUtils refineNSString:videoId] forKey:@"videoId"];
+    [params setObject:[USeekUtils refineNSString:gameId] forKey:@"gameId"];
     if ([USeekUtils validateString:userId] == YES){
-        [params setObject:[USeekUtils refineNSString:userId] forKey:@"userId"];
+        [params setObject:[USeekUtils refineNSString:userId] forKey:@"user_id"];
+    }
+    else {
+        [params setObject:@"" forKey:@"user_id"];
     }
     
-    NSString *urlString = [NSString stringWithFormat:@"https://www.useek.com/sdk/1.0/%@/%@/get_points?user_id=%@", self.publisherId, videoId, userId];
+    NSString *urlString = [NSString stringWithFormat:@"https://www.useek.com/sdk/1.0/%@/%@/get_points", self.publisherId, gameId];
     [USeekUtils requestGET:urlString Params:params Success:^(NSDictionary *dict) {
         USeekPlaybackResultDataModel *result = [[USeekPlaybackResultDataModel alloc] initWithDictionary:dict];
         if (success) {

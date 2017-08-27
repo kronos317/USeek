@@ -52,14 +52,14 @@
 
 #pragma mark - Utils
 
-- (void) loadVideoWithVideoId: (NSString *) videoId UserId: (NSString *) userId{
+- (void) loadVideoWithGameId: (NSString *) gameId UserId: (NSString *) userId{
     UIView *view = self.view;
     if (view == nil || self.webView == nil){
         USEEKLOG(@"USeek is not properly initiated. Aborting...");
         return;
     }
     
-    self.webView.videoId = videoId;
+    self.webView.gameId = gameId;
     self.webView.userId = userId;
     if ([self validateConfiguration] == NO) return;
     

@@ -27,9 +27,9 @@
 }
 
 - (NSString *) description{
-    return [NSString stringWithFormat:@"{\rPublisher ID = %@\rVideo ID = %@\rUser ID = %@\rFinished = %@\rPoints = %d\r}",
+    return [NSString stringWithFormat:@"{\rPublisher ID = %@\rGame ID = %@\rUser ID = %@\rFinished = %@\rPoints = %d\r}",
             self.publisherId,
-            self.videoId,
+            self.gameId,
             self.userId,
             ((self.finished) ? @"Yes" : @"No"),
             self.points
@@ -39,7 +39,7 @@
 - (void) initialize{
     self.publisherId = @"";
     self.userId = @"";
-    self.videoId = @"";
+    self.gameId = @"";
     self.finished = NO;
     self.points = 0;
 }
@@ -47,7 +47,7 @@
 - (void) setWithDictionary: (NSDictionary *) resultDictionary{
     [self initialize];
     self.publisherId = [USeekUtils refineNSString:[resultDictionary objectForKey:@"publisherId"]];
-    self.videoId = [USeekUtils refineNSString:[resultDictionary objectForKey:@"videoId"]];
+    self.gameId = [USeekUtils refineNSString:[resultDictionary objectForKey:@"gameId"]];
     self.userId = [USeekUtils refineNSString:[resultDictionary objectForKey:@"userId"]];
     self.points = [USeekUtils refineInt:[resultDictionary objectForKey:@"lastPlayPoints"] DefaultValue:0];
     self.finished = [USeekUtils refineBool:[resultDictionary objectForKey:@"finished"] DefaultValue:YES];

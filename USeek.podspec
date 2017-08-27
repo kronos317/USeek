@@ -33,7 +33,8 @@ This Pod library is designed to help developers use USeek Library easily.
   s.source_files = 'USeek/Classes/**/*.{h,m}'
   s.resources = ['USeek/Assets/**/*', 'USeek/Classes/**/*.xib']
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+  s.public_header_files = ['USeek/Classes/USeek.h', 'USeek/Classes/USeekPlayerView.h', 'USeek/Classes/USeekPlayerViewController']
+
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

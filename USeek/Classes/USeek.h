@@ -16,6 +16,6 @@
 
 #pragma mark - Request
 
-- (void) requestPointsWithVideoId: (NSString *) videoId UserId: (NSString *) userId Success: (void (^) (int points)) success Failure: (void (^) (NSError *error)) failure;
+- (void) requestPointsWithGameId: (NSString *) gameId UserId: (NSString *) userId Success: (void (^) (int points)) success Failure: (void (^) (NSError *error)) failure;
 
 @end

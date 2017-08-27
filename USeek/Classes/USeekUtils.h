@@ -20,7 +20,7 @@ typedef enum _ENUM_VIDEOLOADSTATUS{
 @interface USeekPlaybackResultDataModel : NSObject
 
 @property (strong, nonatomic) NSString *publisherId;
-@property (strong, nonatomic) NSString *videoId;
+@property (strong, nonatomic) NSString *gameId;
 @property (strong, nonatomic) NSString *userId;
 @property (assign, atomic) BOOL finished;
 @property (assign, atomic) int points;
