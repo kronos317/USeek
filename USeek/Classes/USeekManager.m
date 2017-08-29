@@ -6,14 +6,14 @@
 //  Copyright © 2017 USeek. All rights reserved.
 //
 
-#import "USeek.h"
+#import "USeekManager.h"
 #import "USeekUtils.h"
 
-@interface USeek ()
+@interface USeekManager ()
 
 @end
 
-@implementation USeek
+@implementation USeekManager
 
 + (instancetype) sharedInstance{
     static dispatch_once_t once;

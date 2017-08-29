@@ -11,8 +11,8 @@
 		4B2225F952DD7FD442CBAABEC44D44ED /* USeek-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 945801527BC9CCDABD9E634DD291D08A /* USeek-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		560A5B96D1DC229B0ACC23A3E770AAE0 /* Pods-USeek_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA14E60950F6384F07B2F767022B0EF /* Pods-USeek_Tests-dummy.m */; };
 		79288768C75B2018157138328A4B8BBF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		835E71E41F2749CA00160D77 /* USeek.h in Headers */ = {isa = PBXBuildFile; fileRef = 835E71D71F2749CA00160D77 /* USeek.h */; };
-		835E71E51F2749CA00160D77 /* USeek.m in Sources */ = {isa = PBXBuildFile; fileRef = 835E71D81F2749CA00160D77 /* USeek.m */; };
+		835E71E41F2749CA00160D77 /* USeekManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 835E71D71F2749CA00160D77 /* USeekManager.h */; };
+		835E71E51F2749CA00160D77 /* USeekManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 835E71D81F2749CA00160D77 /* USeekManager.m */; };
 		835E71E61F2749CA00160D77 /* USeekPlayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 835E71D91F2749CA00160D77 /* USeekPlayerView.h */; };
 		835E71E71F2749CA00160D77 /* USeekPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 835E71DA1F2749CA00160D77 /* USeekPlayerView.m */; };
 		835E71E81F2749CA00160D77 /* USeekPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 835E71DC1F2749CA00160D77 /* USeekPlayerViewController.h */; };
@@ -45,8 +45,8 @@
 		6EA14E60950F6384F07B2F767022B0EF /* Pods-USeek_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-USeek_Tests-dummy.m"; sourceTree = "<group>"; };
 		6F9B797D46D1C4042CA2982D81D4D98F /* USeek-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "USeek-prefix.pch"; sourceTree = "<group>"; };
 		79E42BE351980926930B16830E507047 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		835E71D71F2749CA00160D77 /* USeek.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USeek.h; sourceTree = "<group>"; };
-		835E71D81F2749CA00160D77 /* USeek.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USeek.m; sourceTree = "<group>"; };
+		835E71D71F2749CA00160D77 /* USeekManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USeekManager.h; sourceTree = "<group>"; };
+		835E71D81F2749CA00160D77 /* USeekManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USeekManager.m; sourceTree = "<group>"; };
 		835E71D91F2749CA00160D77 /* USeekPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USeekPlayerView.h; sourceTree = "<group>"; };
 		835E71DA1F2749CA00160D77 /* USeekPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USeekPlayerView.m; sourceTree = "<group>"; };
 		835E71DB1F2749CA00160D77 /* USeekPlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = USeekPlayerView.xib; sourceTree = "<group>"; };
@@ -154,8 +154,8 @@
 		7B537259F9C924BB8EB7EC4A66DCF608 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				835E71D71F2749CA00160D77 /* USeek.h */,
-				835E71D81F2749CA00160D77 /* USeek.m */,
+				835E71D71F2749CA00160D77 /* USeekManager.h */,
+				835E71D81F2749CA00160D77 /* USeekManager.m */,
 				835E71E01F2749CA00160D77 /* USeekUtils.h */,
 				835E71E11F2749CA00160D77 /* USeekUtils.m */,
 				835E71E21F2749CA00160D77 /* USeekWebView.h */,
@@ -238,7 +238,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				835E71E41F2749CA00160D77 /* USeek.h in Headers */,
+				835E71E41F2749CA00160D77 /* USeekManager.h in Headers */,
 				835E71EA1F2749CA00160D77 /* USeekUtils.h in Headers */,
 				835E71EC1F2749CA00160D77 /* USeekWebView.h in Headers */,
 				3332AE98803608228367FCF907D02509 /* Pods-USeek_Tests-umbrella.h in Headers */,
@@ -319,7 +319,7 @@
 			files = (
 				560A5B96D1DC229B0ACC23A3E770AAE0 /* Pods-USeek_Tests-dummy.m in Sources */,
 				835E71EB1F2749CA00160D77 /* USeekUtils.m in Sources */,
-				835E71E51F2749CA00160D77 /* USeek.m in Sources */,
+				835E71E51F2749CA00160D77 /* USeekManager.m in Sources */,
 				835E71ED1F2749CA00160D77 /* USeekWebView.m in Sources */,
 				835E71E71F2749CA00160D77 /* USeekPlayerView.m in Sources */,
 				835E71E91F2749CA00160D77 /* USeekPlayerViewController.m in Sources */,

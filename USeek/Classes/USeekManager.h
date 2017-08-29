@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface USeek : NSObject
+@interface USeekManager : NSObject
 
 @property (strong, nonatomic) NSString *publisherId;
 
