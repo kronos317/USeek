@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'USeek'
-  s.version          = '0.2.3'
+  s.version          = '0.2.4'
   s.summary          = 'USeek Library'
 
 # This description is used to generate tags and improve search results.
@@ -33,7 +33,7 @@ This Pod library is designed to help developers use USeek Library easily.
   s.source_files = 'USeek/Classes/**/*.{h,m}'
   s.resources = ['USeek/Assets/**/*', 'USeek/Classes/**/*.xib']
 
-  s.public_header_files = ['USeek/Classes/USeekManager.h', 'USeek/Classes/USeekPlayerView.h', 'USeek/Classes/USeekPlayerViewController.h']
+  s.public_header_files = ['USeek/Classes/USeek.h']
 
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'

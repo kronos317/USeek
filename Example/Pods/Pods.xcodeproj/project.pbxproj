@@ -59,6 +59,7 @@
 		835E71E21F2749CA00160D77 /* USeekWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USeekWebView.h; sourceTree = "<group>"; };
 		835E71E31F2749CA00160D77 /* USeekWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USeekWebView.m; sourceTree = "<group>"; };
 		835E71EF1F2749E600160D77 /* USeekAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = USeekAssets.xcassets; path = Assets/USeekAssets.xcassets; sourceTree = "<group>"; };
+		83A775DF1F692CB50072F409 /* USeek.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = USeek.h; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		945801527BC9CCDABD9E634DD291D08A /* USeek-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "USeek-umbrella.h"; sourceTree = "<group>"; };
 		9A31953DB5E05167F103E0D4AD591B5A /* Pods-USeek_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-USeek_Tests-resources.sh"; sourceTree = "<group>"; };
@@ -154,6 +155,7 @@
 		7B537259F9C924BB8EB7EC4A66DCF608 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				83A775DF1F692CB50072F409 /* USeek.h */,
 				835E71D71F2749CA00160D77 /* USeekManager.h */,
 				835E71D81F2749CA00160D77 /* USeekManager.m */,
 				835E71E01F2749CA00160D77 /* USeekUtils.h */,
