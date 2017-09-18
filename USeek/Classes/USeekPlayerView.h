@@ -17,13 +17,12 @@
 - (void) useekPlayerViewDidStartLoad: (USeekPlayerView *) playerView;
 - (void) useekPlayerViewDidFinishLoad: (USeekPlayerView *) playerView;
 - (void) useekPlayerView: (USeekPlayerView *) playerView didFailWithError: (NSError *) error;
-- (void) useekPlayerView: (USeekPlayerView *) playerView didPlaybackFinish: (BOOL) finished WithPoints: (int) points;
 
 @end
 
 @interface USeekPlayerView : UIView
 
-@property (weak, nonatomic) IBOutlet UILabel *labelLoadingTitle;
+@property (weak, nonatomic) IBOutlet UILabel *loadingTitleLabel;
 
 - (BOOL) validateConfiguration;
 - (void) loadVideoWithGameId: (NSString *) gameId UserId: (NSString *) userId;

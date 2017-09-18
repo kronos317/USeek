@@ -39,7 +39,7 @@ typedef enum _ENUM_VIDEOLOADSTATUS{
 
 + (BOOL) validateUrl: (NSString *) candidate;
 
-+ (void) requestGET: (NSString *) urlString Params: (NSDictionary *) params Success: (void (^) (NSDictionary * dict)) success Failure: (void (^) (NSError *error)) failure;
-+ (void) requestPOST: (NSString *) urlString Params: (NSDictionary *) params Success: (void (^) (NSDictionary * dict)) success Failure: (void (^) (NSError *error)) failure;
++ (void) requestGET: (NSString *) urlString Params: (NSDictionary *) params Success: (void (^) (id responseObject)) success Failure: (void (^) (NSError *error)) failure;
++ (void) requestPOST: (NSString *) urlString Params: (NSDictionary *) params Success: (void (^) (id responseObject)) success Failure: (void (^) (NSError *error)) failure;
 
 @end

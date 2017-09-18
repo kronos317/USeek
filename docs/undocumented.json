@@ -1,0 +1,180 @@
+{
+  "warnings": [
+    {
+      "file": "/Volumes/Work/projects/uSeek/uSeek-iOS/Cocoapods/USeek/USeek/Classes/USeekManager.h",
+      "line": 11,
+      "symbol": "USeekManager",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Work/projects/uSeek/uSeek-iOS/Cocoapods/USeek/USeek/Classes/USeekManager.h",
+      "line": 13,
+      "symbol": "USeekManager.publisherId",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Work/projects/uSeek/uSeek-iOS/Cocoapods/USeek/USeek/Classes/USeekManager.h",
+      "line": 15,
+      "symbol": "USeekManager.+sharedInstance",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Work/projects/uSeek/uSeek-iOS/Cocoapods/USeek/USeek/Classes/USeekManager.h",
+      "line": 19,
+      "symbol": "USeekManager.-requestPointsWithGameId:UserId:Success:Failure:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Work/projects/uSeek/uSeek-iOS/Cocoapods/USeek/USeek/Classes/USeekPlayerView.h",
+      "line": 13,
+      "symbol": "USeekPlayerViewDelegate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Work/projects/uSeek/uSeek-iOS/Cocoapods/USeek/USeek/Classes/USeekPlayerView.h",
+      "line": 17,
+      "symbol": "USeekPlayerViewDelegate.-useekPlayerViewDidStartLoad:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Work/projects/uSeek/uSeek-iOS/Cocoapods/USeek/USeek/Classes/USeekPlayerView.h",
+      "line": 18,
+      "symbol": "USeekPlayerViewDelegate.-useekPlayerViewDidFinishLoad:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Work/projects/uSeek/uSeek-iOS/Cocoapods/USeek/USeek/Classes/USeekPlayerView.h",
+      "line": 19,
+      "symbol": "USeekPlayerViewDelegate.-useekPlayerView:didFailWithError:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Work/projects/uSeek/uSeek-iOS/Cocoapods/USeek/USeek/Classes/USeekPlayerView.h",
+      "line": 20,
+      "symbol": "USeekPlayerViewDelegate.-useekPlayerView:didPlaybackFinish:WithPoints:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Work/projects/uSeek/uSeek-iOS/Cocoapods/USeek/USeek/Classes/USeekPlayerView.h",
+      "line": 24,
+      "symbol": "USeekPlayerView",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Work/projects/uSeek/uSeek-iOS/Cocoapods/USeek/USeek/Classes/USeekPlayerView.h",
+      "line": 26,
+      "symbol": "USeekPlayerView.labelLoadingTitle",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Work/projects/uSeek/uSeek-iOS/Cocoapods/USeek/USeek/Classes/USeekPlayerView.h",
+      "line": 28,
+      "symbol": "USeekPlayerView.-validateConfiguration",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Work/projects/uSeek/uSeek-iOS/Cocoapods/USeek/USeek/Classes/USeekPlayerView.h",
+      "line": 29,
+      "symbol": "USeekPlayerView.-loadVideoWithGameId:UserId:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Work/projects/uSeek/uSeek-iOS/Cocoapods/USeek/USeek/Classes/USeekPlayerView.h",
+      "line": 31,
+      "symbol": "USeekPlayerView.delegate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Work/projects/uSeek/uSeek-iOS/Cocoapods/USeek/USeek/Classes/USeekPlayerViewController.h",
+      "line": 13,
+      "symbol": "USeekPlayerViewControllerDelegate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Work/projects/uSeek/uSeek-iOS/Cocoapods/USeek/USeek/Classes/USeekPlayerViewController.h",
+      "line": 17,
+      "symbol": "USeekPlayerViewControllerDelegate.-useekPlayerViewControllerDidStartLoad:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Work/projects/uSeek/uSeek-iOS/Cocoapods/USeek/USeek/Classes/USeekPlayerViewController.h",
+      "line": 18,
+      "symbol": "USeekPlayerViewControllerDelegate.-useekPlayerViewControllerDidFinishLoad:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Work/projects/uSeek/uSeek-iOS/Cocoapods/USeek/USeek/Classes/USeekPlayerViewController.h",
+      "line": 19,
+      "symbol": "USeekPlayerViewControllerDelegate.-useekPlayerViewController:didFailWithError:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Work/projects/uSeek/uSeek-iOS/Cocoapods/USeek/USeek/Classes/USeekPlayerViewController.h",
+      "line": 20,
+      "symbol": "USeekPlayerViewControllerDelegate.-useekPlayerViewControllerDidClose:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Work/projects/uSeek/uSeek-iOS/Cocoapods/USeek/USeek/Classes/USeekPlayerViewController.h",
+      "line": 24,
+      "symbol": "USeekPlayerViewController",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Work/projects/uSeek/uSeek-iOS/Cocoapods/USeek/USeek/Classes/USeekPlayerViewController.h",
+      "line": 26,
+      "symbol": "USeekPlayerViewController.labelLoadingTitle",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Work/projects/uSeek/uSeek-iOS/Cocoapods/USeek/USeek/Classes/USeekPlayerViewController.h",
+      "line": 28,
+      "symbol": "USeekPlayerViewController.-setCloseButtonHidden:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Work/projects/uSeek/uSeek-iOS/Cocoapods/USeek/USeek/Classes/USeekPlayerViewController.h",
+      "line": 29,
+      "symbol": "USeekPlayerViewController.-validateConfiguration",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Work/projects/uSeek/uSeek-iOS/Cocoapods/USeek/USeek/Classes/USeekPlayerViewController.h",
+      "line": 30,
+      "symbol": "USeekPlayerViewController.-loadVideoWithGameId:UserId:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Work/projects/uSeek/uSeek-iOS/Cocoapods/USeek/USeek/Classes/USeekPlayerViewController.h",
+      "line": 32,
+      "symbol": "USeekPlayerViewController.delegate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Volumes/Work/projects/uSeek/uSeek-iOS/Cocoapods/USeek"
+}

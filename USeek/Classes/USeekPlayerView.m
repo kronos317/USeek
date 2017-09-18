@@ -13,7 +13,7 @@
 @interface USeekPlayerView () <UIWebViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIView *view;
-@property (weak, nonatomic) IBOutlet UIView *viewLoadingMask;
+@property (weak, nonatomic) IBOutlet UIView *loadingMaskView;
 @property (weak, nonatomic) IBOutlet USeekWebView *webView;
 
 @property (assign, atomic) USEEKENUM_VIDEO_LOADSTATUS enumStatus;
@@ -55,7 +55,7 @@
 - (void) loadVideoWithGameId: (NSString *) gameId UserId: (NSString *) userId{
     UIView *view = self.view;
     if (view == nil || self.webView == nil){
-        USEEKLOG(@"USeek is not properly initiated. Aborting...");
+        USEEKLOG(@"USeekPlayerView is not properly initiated. Aborting...");
         return;
     }
     
@@ -65,7 +65,7 @@
     
     self.webView.delegate = self;
     self.enumStatus = USEEKENUM_VIDEO_LOADSTATUS_NONE;
-    self.viewLoadingMask.hidden = YES;
+    self.loadingMaskView.hidden = YES;
     
     [self.webView loadVideo];
 }
@@ -76,36 +76,36 @@
 
 - (void) setLoadingMaskHidden: (BOOL) hidden{
     self.isLoadingMaskHidden = hidden;
-    if (self.viewLoadingMask != nil){
-        self.viewLoadingMask.hidden = hidden;
+    if (self.loadingMaskView != nil){
+        self.loadingMaskView.hidden = hidden;
     }
 }
 
 #pragma mark - UI
 
 - (void) animateLoadingMaskToShow{
-    if (self.viewLoadingMask.hidden == NO) return;
-    self.viewLoadingMask.hidden = NO;
-    self.viewLoadingMask.alpha = 0;
+    if (self.loadingMaskView.hidden == NO) return;
+    self.loadingMaskView.hidden = NO;
+    self.loadingMaskView.alpha = 0;
     dispatch_async(dispatch_get_main_queue(), ^{
         [UIView animateWithDuration:0.25f animations:^{
-            self.viewLoadingMask.alpha = 1;
+            self.loadingMaskView.alpha = 1;
         } completion:^(BOOL finished) {
-            self.viewLoadingMask.alpha = 1;
+            self.loadingMaskView.alpha = 1;
         }];
     });
 }
 
 - (void) animateLoadingMaskToHide{
-    if (self.viewLoadingMask.hidden == YES) return;
-    self.viewLoadingMask.hidden = NO;
-    self.viewLoadingMask.alpha = 1;
+    if (self.loadingMaskView.hidden == YES) return;
+    self.loadingMaskView.hidden = NO;
+    self.loadingMaskView.alpha = 1;
     dispatch_async(dispatch_get_main_queue(), ^{
         [UIView animateWithDuration:0.25f animations:^{
-            self.viewLoadingMask.alpha = 0;
+            self.loadingMaskView.alpha = 0;
         } completion:^(BOOL finished) {
-            self.viewLoadingMask.alpha = 1;
-            self.viewLoadingMask.hidden = YES;
+            self.loadingMaskView.alpha = 1;
+            self.loadingMaskView.hidden = YES;
         }];
     });
 }
@@ -125,7 +125,7 @@
         [self animateLoadingMaskToShow];
     }
     else {
-        self.viewLoadingMask.hidden = YES;
+        self.loadingMaskView.hidden = YES;
     }
 }
 
@@ -144,7 +144,7 @@
         [self animateLoadingMaskToHide];
     }
     else {
-        self.viewLoadingMask.hidden = YES;
+        self.loadingMaskView.hidden = YES;
     }
 }
 
@@ -161,7 +161,7 @@
         [self animateLoadingMaskToHide];
     }
     else {
-        self.viewLoadingMask.hidden = YES;
+        self.loadingMaskView.hidden = YES;
     }
 }
 

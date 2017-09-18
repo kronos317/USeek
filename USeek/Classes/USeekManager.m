@@ -15,13 +15,13 @@
 
 @implementation USeekManager
 
-+ (instancetype) sharedInstance{
++ (instancetype) sharedManager{
     static dispatch_once_t once;
-    static id sharedInstance;
+    static id sharedManager;
     dispatch_once(&once, ^{
-        sharedInstance = [[self alloc] init];
+        sharedManager = [[self alloc] init];
     });
-    return sharedInstance;
+    return sharedManager;
 }
 
 - (id) init{

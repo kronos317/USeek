@@ -23,7 +23,7 @@
 
 @interface USeekPlayerViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UILabel *labelLoadingTitle;
+@property (weak, nonatomic) IBOutlet UILabel *loadingTitleLabel;
 
 - (void) setCloseButtonHidden: (BOOL) hidden;
 - (BOOL) validateConfiguration;

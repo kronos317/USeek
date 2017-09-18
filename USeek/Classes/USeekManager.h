@@ -12,7 +12,7 @@
 
 @property (strong, nonatomic) NSString *publisherId;
 
-+ (instancetype) sharedInstance;
++ (instancetype) sharedManager;
 
 #pragma mark - Request
 

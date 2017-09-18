@@ -134,7 +134,7 @@
     return dict;
 }
 
-+ (void) requestGET: (NSString *) urlString Params: (NSDictionary *) params Success: (void (^) (NSDictionary * dict)) success Failure: (void (^) (NSError *error)) failure{
++ (void) requestGET: (NSString *) urlString Params: (NSDictionary *) params Success: (void (^) (id responseObject)) success Failure: (void (^) (NSError *error)) failure{
     NSString *urlStringWithQueryParams = [NSString stringWithFormat:@"%@?%@", urlString, [USeekUtils getURLEncodedQueryStringFromDictionary:params]];
     
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
@@ -158,7 +158,7 @@
     }] resume];
 }
 
-+ (void) requestPOST: (NSString *) urlString Params: (NSDictionary *) params Success: (void (^) (NSDictionary * dict)) success Failure: (void (^) (NSError *error)) failure{
++ (void) requestPOST: (NSString *) urlString Params: (NSDictionary *) params Success: (void (^) (id responseObject)) success Failure: (void (^) (NSError *error)) failure{
     NSString *postString = [USeekUtils getJSONStringRepresentation:params];
     NSData *postData = [postString dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     NSString *postLength = [NSString stringWithFormat:@"%d", (int) [postData length]];

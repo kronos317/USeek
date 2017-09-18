@@ -33,13 +33,13 @@
 }
 
 - (NSString *) description{
-    return [NSString stringWithFormat:@"USeek Instance (publisherId = %@, gameId = %@, userId = %@", [[USeekManager sharedInstance] publisherId], self.gameId, self.userId];
+    return [NSString stringWithFormat:@"USeek Instance (publisherId = %@, gameId = %@, userId = %@", [[USeekManager sharedManager] publisherId], self.gameId, self.userId];
 }
 
 - (NSURL *) generateVideoUrl{
     if ([self validateConfiguration] == NO) return nil;
     
-    NSString *szUrl = [NSString stringWithFormat:@"https://www.useek.com/sdk/1.0/%@/%@/play", [[USeekManager sharedInstance] publisherId], self.gameId];
+    NSString *szUrl = [NSString stringWithFormat:@"https://www.useek.com/sdk/1.0/%@/%@/play", [[USeekManager sharedManager] publisherId], self.gameId];
     if ([USeekUtils validateString:self.userId] == YES){
         szUrl = [NSString stringWithFormat:@"%@?external_user_id=%@", szUrl, self.userId];
     }
@@ -50,7 +50,7 @@
 }
 
 - (BOOL) validateConfiguration{
-    NSString *publisherId = [[USeekManager sharedInstance] publisherId];
+    NSString *publisherId = [[USeekManager sharedManager] publisherId];
     
     if ([USeekUtils validateString:publisherId] == NO) return NO;
     if ([USeekUtils validateString:self.gameId] == NO) return NO;
