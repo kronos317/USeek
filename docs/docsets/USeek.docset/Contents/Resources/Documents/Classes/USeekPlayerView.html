@@ -14,7 +14,7 @@
     <a title="USeekPlayerView Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">USeek Docs</a> (0% documented)</p>
+        <p><a href="../index.html">USeek Docs</a> (100% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -58,7 +58,26 @@
         <section>
           <section class="section">
             <h1>USeekPlayerView</h1>
-            <p>Undocumented</p>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">USeekPlayerView</span></code></pre>
+
+                </div>
+              </div>
+            <p>This class inherits UIView, which you can easily drop in storyboard or create anywhere in your code.</p>
+
+<p>There are 2 ways to use USeekPlayerView.</p>
+
+<ul>
+<li><p>Add as a subview programmatically</p>
+<pre class="highlight plaintext"><code>  USeekPlayerView *playerView = [[USeekPlayerView alloc] initWithFrame:CGRectMake(0, 0, 100, 60)];
+  [self.view addSubview:playerView];
+</code></pre></li>
+<li><p>Add in storyboard</p></li>
+</ul>
+
+<p>Just change the class name of the view to USeekPlayerView in storyboard.
+ Now you can add the view as IBOutlet and use.</p>
 
           </section>
           <section class="section task-group-section">
@@ -67,9 +86,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)USeekPlayerView(py)labelLoadingTitle"></a>
-                    <a name="//apple_ref/objc/Property/labelLoadingTitle" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)USeekPlayerView(py)labelLoadingTitle">labelLoadingTitle</a>
+                    <a name="/c:objc(cs)USeekPlayerView(py)loadingTitleLabel"></a>
+                    <a name="//apple_ref/objc/Property/loadingTitleLabel" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)USeekPlayerView(py)loadingTitleLabel">loadingTitleLabel</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -77,8 +96,22 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>IBOutlet for the loading label.
+ By using this label, you can customize the loading text, color and fonts.</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">weak</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">IBOutlet</span> <span class="n">UILabel</span> <span class="o">*</span><span class="n">loadingTitleLabel</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">loadingTitleLabel</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="kt">Int32</span><span class="o">&gt;!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -96,8 +129,22 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Validates the configuration.
+ If any of publisher id or game id is not set, validation fails.</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">validateConfiguration</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">validateConfiguration</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="o">!</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -115,8 +162,57 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Starts loading the video in UIWebView instance.</p>
+<div class="aside aside-precondition">
+    <p class="aside-title">Precondition</p>
+    <p>Publisher ID should be set.</p>
 
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">loadVideoWithGameId</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">gameId</span> <span class="nf">UserId</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">userId</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">loadVideo</span><span class="p">(</span><span class="n">withGameId</span> <span class="nv">gameId</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">,</span> <span class="nv">userId</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>gameId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>unique game id provided by USeek, not nullable.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>userId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>user&rsquo;s unque id registered in USeek, nullable.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -134,8 +230,21 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The delegate can be used to handle the events occured while playing video.</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/USeekPlayerViewDelegate.html">USeekPlayerViewDelegate</a></span><span class="o">&gt;</span> <span class="n">delegate</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">weak</span> <span class="k">var</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/USeekPlayerViewDelegate.html">USeekPlayerViewDelegate</a></span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -145,7 +254,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="https://github.com/chrislin89/USeek" target="_blank" rel="external">USeek</a>. All rights reserved. (Last updated: 2017-09-13)</p>
+          <p>&copy; 2017 <a class="link" href="https://github.com/chrislin89/USeek" target="_blank" rel="external">USeek</a>. All rights reserved. (Last updated: 2017-09-26)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

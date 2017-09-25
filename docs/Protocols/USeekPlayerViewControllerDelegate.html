@@ -14,7 +14,7 @@
     <a title="USeekPlayerViewControllerDelegate Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">USeek Docs</a> (0% documented)</p>
+        <p><a href="../index.html">USeek Docs</a> (100% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -58,7 +58,15 @@
         <section>
           <section class="section">
             <h1>USeekPlayerViewControllerDelegate</h1>
-            <p>Undocumented</p>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">USeekPlayerViewControllerDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                </div>
+              </div>
+            <p>The USeekPlayerViewControllerDelegate protocol provides a mechanism for your application
+ to take action on events that occur in the USeekWebView. You can make use of these calls
+ by assigning an object to the USeekPlayerViewController&rsquo;s delegate property directly.</p>
 
           </section>
           <section class="section task-group-section">
@@ -77,8 +85,41 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Called when USeekPlayerViewController starts loading the video.</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">useekPlayerViewControllerDidStartLoad</span><span class="p">:</span>
+    <span class="p">(</span><span class="n"><a href="../Classes/USeekPlayerViewController.html">USeekPlayerViewController</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">playerViewController</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">useekPlayerViewControllerDidStartLoad</span><span class="p">(</span><span class="n">_</span> <span class="nv">playerViewController</span><span class="p">:</span> <span class="kt"><a href="../Classes/USeekPlayerViewController.html">USeekPlayerViewController</a></span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>playerViewController</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The USeekPlayerViewController object which initiated this event.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -96,8 +137,41 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Called when USeekPlayerViewController finished loading the video.</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">useekPlayerViewControllerDidFinishLoad</span><span class="p">:</span>
+    <span class="p">(</span><span class="n"><a href="../Classes/USeekPlayerViewController.html">USeekPlayerViewController</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">playerViewController</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">useekPlayerViewControllerDidFinishLoad</span><span class="p">(</span><span class="n">_</span> <span class="nv">playerViewController</span><span class="p">:</span> <span class="kt"><a href="../Classes/USeekPlayerViewController.html">USeekPlayerViewController</a></span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>playerViewController</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The USeekPlayerViewController object which initiated this event.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -115,8 +189,54 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Called when USeekPlayerViewController detected an error while loading the video.</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">useekPlayerViewController</span><span class="p">:</span>
+            <span class="p">(</span><span class="n"><a href="../Classes/USeekPlayerViewController.html">USeekPlayerViewController</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">playerViewController</span>
+                 <span class="nf">didFailWithError</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">useekPlayerViewController</span><span class="p">(</span><span class="n">_</span> <span class="nv">playerViewController</span><span class="p">:</span> <span class="kt"><a href="../Classes/USeekPlayerViewController.html">USeekPlayerViewController</a></span><span class="o">!</span><span class="p">,</span> <span class="n">didFailWithError</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>playerViewController</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The USeekPlayerViewController object which initiated this event.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The NSError object with error information.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -134,8 +254,41 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Called when user clicked close button to dismiss the USeekPlayerViewController</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">useekPlayerViewControllerDidClose</span><span class="p">:</span>
+    <span class="p">(</span><span class="n"><a href="../Classes/USeekPlayerViewController.html">USeekPlayerViewController</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">playerViewController</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">useekPlayerViewControllerDidClose</span><span class="p">(</span><span class="n">_</span> <span class="nv">playerViewController</span><span class="p">:</span> <span class="kt"><a href="../Classes/USeekPlayerViewController.html">USeekPlayerViewController</a></span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>playerViewController</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The USeekPlayerView object which initiated this event.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -145,7 +298,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="https://github.com/chrislin89/USeek" target="_blank" rel="external">USeek</a>. All rights reserved. (Last updated: 2017-09-13)</p>
+          <p>&copy; 2017 <a class="link" href="https://github.com/chrislin89/USeek" target="_blank" rel="external">USeek</a>. All rights reserved. (Last updated: 2017-09-26)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

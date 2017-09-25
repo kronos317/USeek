@@ -14,7 +14,7 @@
     <a title="USeekManager Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">USeek Docs</a> (0% documented)</p>
+        <p><a href="../index.html">USeek Docs</a> (100% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -58,7 +58,18 @@
         <section>
           <section class="section">
             <h1>USeekManager</h1>
-            <p>Undocumented</p>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">USeekManager</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>This singleton class provides the following features</p>
+
+<ul>
+<li>Set / Retrieve publisher ID</li>
+<li>Request server for the points of certain user based on game id</li>
+</ul>
 
           </section>
           <section class="section task-group-section">
@@ -77,8 +88,34 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Mutable property to set / get publisher id.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    You should set publisher id before loading video.
 
+</div>
+
+<hr>
+
+<p>You can set publisher id in AppDelegate like this.</p>
+<pre class="highlight plaintext"><code>  ```
+  [[USeekManager sharedManager] setPublisherId: @"publisher id"];
+  ```
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">publisherId</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">publisherId</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -86,9 +123,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)USeekManager(cm)sharedInstance"></a>
-                    <a name="//apple_ref/objc/Method/+sharedInstance" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)USeekManager(cm)sharedInstance">+sharedInstance</a>
+                    <a name="/c:objc(cs)USeekManager(cm)sharedManager"></a>
+                    <a name="//apple_ref/objc/Method/+sharedManager" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)USeekManager(cm)sharedManager">+sharedManager</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -96,8 +133,21 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Returns USeekManager singleton object.</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="n">sharedManager</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">shared</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="k">Self</span><span class="o">!</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -126,8 +176,85 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Queries the points user has gained while playing the game.
+ The centralized server will return user&rsquo;s points based on gameId and userId.</p>
+<div class="aside aside-precondition">
+    <p class="aside-title">Precondition</p>
+    <p>Publisher ID should be set.</p>
 
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">requestPointsWithGameId</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">gameId</span>
+                         <span class="nf">UserId</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">userId</span>
+                        <span class="nf">Success</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="kt">int</span><span class="p">))</span><span class="nv">success</span>
+                        <span class="nf">Failure</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSError</span> <span class="o">*</span><span class="p">))</span><span class="nv">failure</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">requestPoints</span><span class="p">(</span><span class="n">withGameId</span> <span class="nv">gameId</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">,</span> <span class="nv">userId</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">,</span> <span class="nv">success</span><span class="p">:</span> <span class="p">((</span><span class="kt">Int32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span><span class="o">!</span><span class="p">,</span> <span class="nv">failure</span><span class="p">:</span> <span class="p">((</span><span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>userId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>user&rsquo;s unique id registered in USeek</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>gameId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>unique game id provided by USeek</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>success</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>block which will be triggered after response is successfully retrieved</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>failure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>block which will be triggered when there is an error detected</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -137,7 +264,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="https://github.com/chrislin89/USeek" target="_blank" rel="external">USeek</a>. All rights reserved. (Last updated: 2017-09-13)</p>
+          <p>&copy; 2017 <a class="link" href="https://github.com/chrislin89/USeek" target="_blank" rel="external">USeek</a>. All rights reserved. (Last updated: 2017-09-26)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

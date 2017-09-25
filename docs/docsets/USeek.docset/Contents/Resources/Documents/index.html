@@ -13,7 +13,7 @@
     <a title="USeek  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">USeek Docs</a> (0% documented)</p>
+        <p><a href="index.html">USeek Docs</a> (100% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -57,33 +57,166 @@
         <section>
           <section class="section">
             
-            <h1 id='useek' class='heading'>USeek</h1>
+            <p align="center">
+<img src="https://static1.squarespace.com/static/592df079893fc0e042b0e585/t/592df28c3e00be8e7a34d733/1498102982326/?format=1500w" alt="Icon"/>
+</p>
 
 <p><a href="https://travis-ci.org/chrislin89/USeek"><img src="http://img.shields.io/travis/chrislin89/USeek.svg?style=flat" alt="CI Status"></a>
 <a href="http://cocoapods.org/pods/USeek"><img src="https://img.shields.io/cocoapods/v/USeek.svg?style=flat" alt="Version"></a>
 <a href="http://cocoapods.org/pods/USeek"><img src="https://img.shields.io/cocoapods/l/USeek.svg?style=flat" alt="License"></a>
 <a href="http://cocoapods.org/pods/USeek"><img src="https://img.shields.io/cocoapods/p/USeek.svg?style=flat" alt="Platform"></a></p>
-<h2 id='example' class='heading'>Example</h2>
+<h2 id='what-is-useek' class='heading'>What is USeek?</h2>
 
-<p>To run the example project, clone the repo, and run <code>pod install</code> from the Example directory first.</p>
+<p>The USeek interactive advertising solution turns your videos into engaging experiences full of rewards&hellip;</p>
+
+<p><a href="https://www.landing.useek.com/"><img src="https://static1.squarespace.com/static/592df079893fc0e042b0e585/t/59496cddbe6594e7cda66c6a/1497984245701/?format=1500w" alt="Rewards"></a></p>
+
+<p>&hellip;Increasing viewer attention while searching your creative for objects.</p>
+<h2 id='useek-library' class='heading'>USeek Library</h2>
+
+<p><code>USeek</code> library is designed to help developers easily add the enjoyable features of USeek in their own application.</p>
+<h2 id='warning' class='heading'>Warning</h2>
+
+<ul>
+<li><strong>USeek</strong> utilizes the power of <code>safari</code>&lsquo;s interactive video feature, and this is only available from iOS 10.0 or later.</li>
+</ul>
 <h2 id='requirements' class='heading'>Requirements</h2>
-<h2 id='installation' class='heading'>Installation</h2>
 
-<p>USeek is available through <a href="http://cocoapods.org">CocoaPods</a>. To install
-it, simply add the following line to your Podfile:</p>
-<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s2">"USeek"</span>
+<p><a href=""><img src="https://img.shields.io/badge/Platform-iOS-blue.svg?style=fla" alt="Platform iOS"></a></p>
+<h4 id='useek' class='heading'>USeek:-</h4>
+
+<p><a href="https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html"><img src="https://img.shields.io/badge/Language-Objective%20C-blue.svg?style=flat" alt="Objective-c"></a></p>
+
+<p>Minimum iOS Target: iOS 10.0</p>
+
+<p>Minimum Xcode Version: Xcode 8.0</p>
+<h1 id='installation' class='heading'>Installation</h1>
+<h4 id='from-cocoapods' class='heading'>From CocoaPods</h4>
+
+<p><a href="http://cocoapods.org">CocoaPods</a> is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like <code>USeek</code> in your projects. First, add the following line to your <a href="http://guides.cocoapods.org/using/using-cocoapods.html">Podfile</a>:</p>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'USeek'</span><span class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s1">'https://github.com/chrislin89/USeek.git'</span>
 </code></pre>
-<h2 id='author' class='heading'>Author</h2>
 
-<p>chrislin89, <a href="mailto:chrislin.317@hotmail.com">chrislin.317@hotmail.com</a></p>
+<p>This pulls from the <code>master</code> branch directly.</p>
+
+<p>Second, install <code>USeek</code> into your project:</p>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="n">install</span>
+</code></pre>
+<h4 id='carthage' class='heading'>Carthage</h4>
+
+<p><a href="https://github.com/Carthage/Carthage">Carthage</a> is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate <code>USeek</code> into your Xcode project using Carthage, specify it in your <code>Cartfile</code>:</p>
+<pre class="highlight plaintext"><code>github "chrislin89/USeekFramework"
+</code></pre>
+
+<p>Run <code>carthage update</code> to build the framework and drag the built <code>USeek.framework</code> (in Carthage/Build/iOS folder) into your Xcode project (Linked Frameworks and Libraries in <code>Targets</code>).</p>
+<h4 id='manually' class='heading'>Manually</h4>
+
+<ul>
+<li>Drag the <code>chrislin89/USeekFramework</code> folder into your project.</li>
+<li>Take care that <code>USeek.framework</code> is added to <code>Targets-&gt;Build Phases-&gt;Embeded Frameworks</code>.</li>
+</ul>
+<h2 id='usage' class='heading'>Usage</h2>
+
+<p>(see sample Xcode project in <code>/USeekDemo</code>)</p>
+
+<p>There are 3 main classes.</p>
+
+<ul>
+<li>USeekManager</li>
+<li>USeekPlayerView</li>
+<li>USeekPlayerViewController</li>
+</ul>
+
+<p><code>USeekManager</code> is singleton class, with which you can do the following actions</p>
+
+<ul>
+<li>Set / Retrieve publisher ID</li>
+<li>Request for the points of certain user</li>
+</ul>
+
+<p><code>USeekPlayerView</code> and <code>USeekPlayerViewController</code> classes are designed to load &amp; play the embeded video in UIView or as a standalone UIViewController.</p>
+<h4 id='set-publisher-id' class='heading'>Set Publisher ID</h4>
+<pre class="highlight plaintext"><code>[[USeekManager sharedManager] setPublisherId: @"{your publisher ID}"];
+</code></pre>
+<h4 id='how-to-use-useekplayerviewcontroller' class='heading'>How to use USeekPlayerViewController</h4>
+
+<ol>
+<li>Instantiate USeekPlayerViewController</li>
+</ol>
+<pre class="highlight plaintext"><code>USeekPlayerViewController *vc = [[USeekPlayerViewController alloc] init];
+</code></pre>
+
+<ol>
+<li>Load video</li>
+</ol>
+<pre class="highlight plaintext"><code>[vc loadVideoWithGameId:@"{game id}" UserId:@"{user id, can be empty}"];
+</code></pre>
+
+<ol>
+<li>Customize View Controller <code>[optional]</code></li>
+</ol>
+<pre class="highlight plaintext"><code>// show / hide `close` button
+[vc setCloseButtonHidden:YES];
+
+// customize loading text
+vc.loadingTitleLabel.text = @"Please wait while loading video...";          
+
+// set delegate
+vc.delegate = self;
+</code></pre>
+
+<ol>
+<li>Present View Controller</li>
+</ol>
+<pre class="highlight plaintext"><code>dispatch_async(dispatch_get_main_queue(), ^{
+    [self presentViewController:vc animated:YES completion:nil];
+});
+</code></pre>
+
+<ol>
+<li>Get notified when USeekPlayerViewController is closed <code>[optional]</code></li>
+</ol>
+
+<p>USeekPlayerViewControllerDelegate defines several useful delegate methods (optional), and one of them is <code>useekPlayerViewControllerDidClose:</code> which will be called when the USeekPlayerViewController is closed.</p>
+<pre class="highlight plaintext"><code>- (void)useekPlayerViewControllerDidClose:(USeekPlayerViewController *)playerViewController{
+    // Do anything here
+}
+
+</code></pre>
+<h4 id='how-to-use-useekplayerview' class='heading'>How to use USeekPlayerView</h4>
+
+<p>USeekPlayerView inherits UIView, thus you can directly add it in storyboard or add as subview programmatically.</p>
+
+<ul>
+<li>Add as a subview programmatically</li>
+</ul>
+<pre class="highlight plaintext"><code>USeekPlayerView *playerView = [[USeekPlayerView alloc] initWithFrame:CGRectMake(0, 0, 100, 60)];
+[self.view addSubview:playerView];
+</code></pre>
+
+<ul>
+<li>Add in storyboard</li>
+</ul>
+
+<p>Just change the class name of the view to USeekPlayerView in storyboard.
+Now you can add the view as IBOutlet and use.</p>
+<h4 id='how-to-get-points-from-server' class='heading'>How to get points from server</h4>
+
+<p>By calling <code>[[USeekManager sharedManager] requestPointsWithGameId:UserId:Success:Failure]</code>, we can get the points the user gained while playing the gamified video.</p>
+<pre class="highlight plaintext"><code>[[USeekManager sharedManager] requestPointsWithGameId:@"game id" UserId:@"user id" Success:^(int points) {
+    // Do anything here
+} Failure:^(NSError *error) {
+    // Do anything here
+}];
+</code></pre>
 <h2 id='license' class='heading'>License</h2>
 
-<p>USeek is available under the MIT license. See the LICENSE file for more info.</p>
+<p>USeek is available under the USEEK license. See the LICENSE file for more info.</p>
 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="https://github.com/chrislin89/USeek" target="_blank" rel="external">USeek</a>. All rights reserved. (Last updated: 2017-09-13)</p>
+          <p>&copy; 2017 <a class="link" href="https://github.com/chrislin89/USeek" target="_blank" rel="external">USeek</a>. All rights reserved. (Last updated: 2017-09-26)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
