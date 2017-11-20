@@ -63,18 +63,9 @@
         return;
     }
     
-    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
-    [params setObject:[USeekUtils refineNSString:self.publisherId] forKey:@"publisherId"];
-    [params setObject:[USeekUtils refineNSString:gameId] forKey:@"gameId"];
-    if ([USeekUtils validateString:userId] == YES){
-        [params setObject:[USeekUtils refineNSString:userId] forKey:@"user_id"];
-    }
-    else {
-        [params setObject:@"" forKey:@"user_id"];
-    }
-    
-    NSString *urlString = [NSString stringWithFormat:@"https://www.useek.com/sdk/1.0/%@/%@/get_points", self.publisherId, gameId];
-    [USeekUtils requestGET:urlString Params:params Success:^(NSDictionary *dict) {
+    userId = [USeekUtils refineNSString: userId];
+    NSString *urlString = [NSString stringWithFormat:@"https://www.useek.com/sdk/1.0/%@/%@/get_points?external_user_id=%@", self.publisherId, gameId, userId];
+    [USeekUtils requestGET:urlString Params:nil Success:^(NSDictionary *dict) {
         USeekPlaybackResultDataModel *result = [[USeekPlaybackResultDataModel alloc] initWithDictionary:dict];
         if (success) {
             success(result.points);
