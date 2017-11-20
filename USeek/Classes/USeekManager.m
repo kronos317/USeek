@@ -37,7 +37,7 @@
 
 #pragma mark - Request
 
-- (void) requestPointsWithGameId: (NSString *) gameId UserId: (NSString *) userId Success: (void (^) (int points)) success Failure: (void (^) (NSError *error)) failure{
+- (void) requestPointsWithGameId: (NSString *) gameId UserId: (NSString *) userId Success: (void (^) (int lastPlayPoints, int totalPoints)) success Failure: (void (^) (NSError *error)) failure{
     if ([USeekUtils validateString:self.publisherId] == NO){
         NSDictionary *userInfo = @{
                                    NSLocalizedDescriptionKey: NSLocalizedString(@"Operation was cancelled due to invalid publisher id.", nil),
@@ -68,7 +68,7 @@
     [USeekUtils requestGET:urlString Params:nil Success:^(NSDictionary *dict) {
         USeekPlaybackResultDataModel *result = [[USeekPlaybackResultDataModel alloc] initWithDictionary:dict];
         if (success) {
-            success(result.points);
+            success(result.lastPlayPoints, result.totalPoints);
         }
     } Failure:^(NSError *error) {
         if (failure){

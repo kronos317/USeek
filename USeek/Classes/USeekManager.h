@@ -55,6 +55,6 @@
  * @param failure     block which will be triggered when there is an error detected
  *
  */
-- (void) requestPointsWithGameId: (NSString *) gameId UserId: (NSString *) userId Success: (void (^) (int points)) success Failure: (void (^) (NSError *error)) failure;
+- (void) requestPointsWithGameId: (NSString *) gameId UserId: (NSString *) userId Success: (void (^) (int lastPlayPoints, int totalPoints)) success Failure: (void (^) (NSError *error)) failure;
 
 @end

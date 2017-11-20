@@ -22,8 +22,10 @@ typedef enum _ENUM_VIDEOLOADSTATUS{
 @property (strong, nonatomic) NSString *publisherId;
 @property (strong, nonatomic) NSString *gameId;
 @property (strong, nonatomic) NSString *userId;
+@property (strong, nonatomic) NSString *internalUserId;
 @property (assign, atomic) BOOL finished;
-@property (assign, atomic) int points;
+@property (assign, atomic) int lastPlayPoints;
+@property (assign, atomic) int totalPoints;
 
 - (instancetype) initWithDictionary: (NSDictionary *) dictionary;
 - (void) setWithDictionary: (NSDictionary *) resultDictionary;

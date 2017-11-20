@@ -27,29 +27,34 @@
 }
 
 - (NSString *) description{
-    return [NSString stringWithFormat:@"{\rPublisher ID = %@\rGame ID = %@\rUser ID = %@\rFinished = %@\rPoints = %d\r}",
+    return [NSString stringWithFormat:@"{\rPublisher ID = %@\rGame ID = %@\rExternal User ID = %@\rFinished = %@\rLast Play Points = %d\rTotal Points = %d\r}",
             self.publisherId,
             self.gameId,
             self.userId,
             ((self.finished) ? @"Yes" : @"No"),
-            self.points
+            self.lastPlayPoints,
+            self.totalPoints
             ];
 }
 
 - (void) initialize{
     self.publisherId = @"";
     self.userId = @"";
+    self.internalUserId = @"";
     self.gameId = @"";
     self.finished = NO;
-    self.points = 0;
+    self.lastPlayPoints = 0;
+    self.totalPoints = 0;
 }
 
 - (void) setWithDictionary: (NSDictionary *) resultDictionary{
     [self initialize];
     self.publisherId = [USeekUtils refineNSString:[resultDictionary objectForKey:@"publisherId"]];
     self.gameId = [USeekUtils refineNSString:[resultDictionary objectForKey:@"gameId"]];
-    self.userId = [USeekUtils refineNSString:[resultDictionary objectForKey:@"userId"]];
-    self.points = [USeekUtils refineInt:[resultDictionary objectForKey:@"lastPlayPoints"] DefaultValue:0];
+    self.userId = [USeekUtils refineNSString:[resultDictionary objectForKey:@"externalUserId"]];
+    self.internalUserId = [USeekUtils refineNSString:[resultDictionary objectForKey:@"userId"]];
+    self.lastPlayPoints = [USeekUtils refineInt:[resultDictionary objectForKey:@"lastPlayPoints"] DefaultValue:0];
+    self.totalPoints = [USeekUtils refineInt:[resultDictionary objectForKey:@"totalPoints"] DefaultValue:0];
     self.finished = [USeekUtils refineBool:[resultDictionary objectForKey:@"finished"] DefaultValue:YES];
 }
 
