@@ -13,7 +13,7 @@
 /**
  *
  * The USeekPlayerViewDelegate protocol provides a mechanism for your application to take
- * action on events that occur in the USeekWebView. You can make use of these calls by
+ * action on events that occur in the WKWebView. You can make use of these calls by
  * assigning an object to the USeekPlayerView's delegate property directly.
  *
  */

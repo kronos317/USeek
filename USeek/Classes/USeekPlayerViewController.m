@@ -7,22 +7,44 @@
 //
 
 #import "USeekPlayerViewController.h"
-#import "USeekWebView.h"
+#import "USeekManager.h"
 #import "USeekUtils.h"
+#import <WebKit/WebKit.h>
 
-@interface USeekPlayerViewController () <UIWebViewDelegate>
+@interface USeekPlayerViewController () <WKUIDelegate, WKNavigationDelegate>
+
+@property (weak, nonatomic) IBOutlet UIView *viewContainer;
+@property (strong, nonatomic) WKWebView *webView;
 
 @property (weak, nonatomic) IBOutlet UIView *loadingMaskView;
-@property (weak, nonatomic) IBOutlet USeekWebView *webView;
 @property (weak, nonatomic) IBOutlet UIButton *closeButton;
 
 @property (assign, atomic) USEEKENUM_VIDEO_LOADSTATUS enumStatus;
 @property (assign, atomic) BOOL isCloseButtonHidden;
 @property (assign, atomic) BOOL isLoadingMaskHidden;
 
+@property (strong, nonatomic) NSString *gameId;
+@property (strong, nonatomic) NSString *userId;
+
 @end
 
 @implementation USeekPlayerViewController
+
+#pragma mark - Orientation
+
+- (BOOL)shouldAutorotate {
+    return YES;
+}
+
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
+    return UIInterfaceOrientationLandscapeRight;
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskLandscape;
+}
+
+#pragma mark - Initialization
 
 - (id) init {
     self = [super initWithNibName:NSStringFromClass([self class]) bundle:nil];
@@ -37,7 +59,7 @@
     self.isLoadingMaskHidden = NO;
     
     UIView *view = self.view;
-    if (view == nil || self.webView == nil){
+    if (view == nil){
         USEEKLOG(@"USeekPlayerViewController is not properly initiated. Aborting...");
         return;
     }
@@ -48,11 +70,26 @@
     // Do any additional setup after loading the view.
     
     self.closeButton.hidden = self.isCloseButtonHidden;
+    
+    [self initializeWebView];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) initializeWebView {
+    WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
+    config.allowsInlineMediaPlayback = YES;
+    config.mediaTypesRequiringUserActionForPlayback = WKAudiovisualMediaTypeNone;
+    
+    self.webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, self.viewContainer.frame.size.width, self.viewContainer.frame.size.height) configuration:config];
+    self.webView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+    self.webView.UIDelegate = self;
+    self.webView.navigationDelegate = self;
+    
+    [self.viewContainer addSubview:self.webView];
 }
 
 #pragma mark - Utils
@@ -64,20 +101,46 @@
         return;
     }
     
-    self.webView.gameId = gameId;
-    self.webView.userId = userId;
+    self.gameId = gameId;
+    self.userId = userId;
     if ([self validateConfiguration] == NO) return;
     
-    self.webView.delegate = self;
     self.enumStatus = USEEKENUM_VIDEO_LOADSTATUS_NONE;
     self.loadingMaskView.hidden = YES;
     
-    [self.webView loadVideo];
+    NSURL *url = [self generateVideoUrl];
+    if (url == nil){
+        USEEKLOG(@"Useek Configuration Invalid:\n %@", self);
+        return;
+    }
+    
+    NSURLRequest *urlReq = [NSURLRequest requestWithURL:url];
+    self.webView.opaque = NO;
+    self.webView.backgroundColor = [UIColor clearColor];
+    [self.webView loadRequest:urlReq];
 }
 
 - (BOOL) validateConfiguration{
-    return [self.webView validateConfiguration];
+    NSString *publisherId = [[USeekManager sharedManager] publisherId];
+    
+    if ([USeekUtils validateString:publisherId] == NO) return NO;
+    if ([USeekUtils validateString:self.gameId] == NO) return NO;
+    return YES;
 }
+
+- (NSURL *) generateVideoUrl{
+    if ([self validateConfiguration] == NO) return nil;
+    
+    NSString *szUrl = [NSString stringWithFormat:@"https://www.useek.com/sdk/1.0/%@/%@/play", [[USeekManager sharedManager] publisherId], self.gameId];
+    if ([USeekUtils validateString:self.userId] == YES){
+        szUrl = [NSString stringWithFormat:@"%@?external_user_id=%@", szUrl, self.userId];
+    }
+    
+    if ([USeekUtils validateUrl:szUrl] == NO) return nil;
+    NSURL *url = [NSURL URLWithString:szUrl];
+    return url;
+}
+
 
 - (void) setCloseButtonHidden: (BOOL) hidden{
     self.isCloseButtonHidden = hidden;
@@ -133,10 +196,10 @@
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
-#pragma mark - UIWebViewDelegate
+#pragma mark - WKNavigationDelegate
 
-- (void)webViewDidStartLoad:(UIWebView *)webView{
-    USEEKLOG(@"USeekWebView didStartLoad");
+- (void)webView:(WKWebView *)webView didCommitNavigation:(WKNavigation *)navigation {
+    USEEKLOG(@"USeekPlayerViewController didStartLoad");
     if (self.enumStatus == USEEKENUM_VIDEO_LOADSTATUS_NONE){
         if (self.delegate && [self.delegate respondsToSelector:@selector(useekPlayerViewControllerDidStartLoad:)] == YES){
             [self.delegate useekPlayerViewControllerDidStartLoad:self];
@@ -152,8 +215,8 @@
     }
 }
 
-- (void)webViewDidFinishLoad:(UIWebView *)webView{
-    USEEKLOG(@"USeekWebView didFinishLoad");
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
+    USEEKLOG(@"USeekPlayerViewController didFinishLoad");
     if (self.enumStatus != USEEKENUM_VIDEO_LOADSTATUS_LOADFAILED && self.enumStatus != USEEKENUM_VIDEO_LOADSTATUS_LOADED){
         if (self.delegate && [self.delegate respondsToSelector:@selector(useekPlayerViewControllerDidFinishLoad:)] == YES){
             [self.delegate useekPlayerViewControllerDidFinishLoad:self];
@@ -171,8 +234,8 @@
     }
 }
 
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
-    USEEKLOG(@"USeekWebView didFailLoadWithError: %@", error);
+- (void)webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error {
+    USEEKLOG(@"USeekPlayerViewController didFailLoadWithError: %@", error);
     if (self.enumStatus != USEEKENUM_VIDEO_LOADSTATUS_LOADFAILED){
         if (self.delegate && [self.delegate respondsToSelector:@selector(useekPlayerViewController:didFailWithError:)] == YES){
             [self.delegate useekPlayerViewController:self didFailWithError:error];

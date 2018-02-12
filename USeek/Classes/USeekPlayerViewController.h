@@ -13,8 +13,10 @@
 /**
  *
  * The USeekPlayerViewControllerDelegate protocol provides a mechanism for your application
- * to take action on events that occur in the USeekWebView. You can make use of these calls
+ * to take action on events that occur in the WKWebView. You can make use of these calls
  * by assigning an object to the USeekPlayerViewController's delegate property directly.
+ *
+ * The ViewController will auto-rotate to landscap mode when it is open. But this won't work well if "Requires Full Scree" is not checked in plist file in case of iPad.
  *
  */
 @protocol USeekPlayerViewControllerDelegate <NSObject>

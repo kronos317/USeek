@@ -19,8 +19,6 @@
 		835E71E91F2749CA00160D77 /* USeekPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 835E71DD1F2749CA00160D77 /* USeekPlayerViewController.m */; };
 		835E71EA1F2749CA00160D77 /* USeekUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 835E71E01F2749CA00160D77 /* USeekUtils.h */; };
 		835E71EB1F2749CA00160D77 /* USeekUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 835E71E11F2749CA00160D77 /* USeekUtils.m */; };
-		835E71EC1F2749CA00160D77 /* USeekWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = 835E71E21F2749CA00160D77 /* USeekWebView.h */; };
-		835E71ED1F2749CA00160D77 /* USeekWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 835E71E31F2749CA00160D77 /* USeekWebView.m */; };
 		B8B1FE71FDA68F04ACD149B195658028 /* USeek-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AE76A3E21BF7D08538E1CF0BB2DFCE60 /* USeek-dummy.m */; };
 		BA0574419232673250BB794118413A97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -56,8 +54,6 @@
 		835E71DF1F2749CA00160D77 /* USeekPlayerViewController~iphone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "USeekPlayerViewController~iphone.xib"; sourceTree = "<group>"; };
 		835E71E01F2749CA00160D77 /* USeekUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USeekUtils.h; sourceTree = "<group>"; };
 		835E71E11F2749CA00160D77 /* USeekUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USeekUtils.m; sourceTree = "<group>"; };
-		835E71E21F2749CA00160D77 /* USeekWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USeekWebView.h; sourceTree = "<group>"; };
-		835E71E31F2749CA00160D77 /* USeekWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USeekWebView.m; sourceTree = "<group>"; };
 		835E71EF1F2749E600160D77 /* USeekAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = USeekAssets.xcassets; path = Assets/USeekAssets.xcassets; sourceTree = "<group>"; };
 		83A775DF1F692CB50072F409 /* USeek.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = USeek.h; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -160,8 +156,6 @@
 				835E71D81F2749CA00160D77 /* USeekManager.m */,
 				835E71E01F2749CA00160D77 /* USeekUtils.h */,
 				835E71E11F2749CA00160D77 /* USeekUtils.m */,
-				835E71E21F2749CA00160D77 /* USeekWebView.h */,
-				835E71E31F2749CA00160D77 /* USeekWebView.m */,
 				835E71D91F2749CA00160D77 /* USeekPlayerView.h */,
 				835E71DA1F2749CA00160D77 /* USeekPlayerView.m */,
 				835E71DB1F2749CA00160D77 /* USeekPlayerView.xib */,
@@ -242,7 +236,6 @@
 			files = (
 				835E71E41F2749CA00160D77 /* USeekManager.h in Headers */,
 				835E71EA1F2749CA00160D77 /* USeekUtils.h in Headers */,
-				835E71EC1F2749CA00160D77 /* USeekWebView.h in Headers */,
 				3332AE98803608228367FCF907D02509 /* Pods-USeek_Tests-umbrella.h in Headers */,
 				835E71E81F2749CA00160D77 /* USeekPlayerViewController.h in Headers */,
 				835E71E61F2749CA00160D77 /* USeekPlayerView.h in Headers */,
@@ -322,7 +315,6 @@
 				560A5B96D1DC229B0ACC23A3E770AAE0 /* Pods-USeek_Tests-dummy.m in Sources */,
 				835E71EB1F2749CA00160D77 /* USeekUtils.m in Sources */,
 				835E71E51F2749CA00160D77 /* USeekManager.m in Sources */,
-				835E71ED1F2749CA00160D77 /* USeekWebView.m in Sources */,
 				835E71E71F2749CA00160D77 /* USeekPlayerView.m in Sources */,
 				835E71E91F2749CA00160D77 /* USeekPlayerViewController.m in Sources */,
 			);

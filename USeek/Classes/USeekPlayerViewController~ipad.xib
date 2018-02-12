@@ -20,7 +20,7 @@
                 <outlet property="loadingMaskView" destination="Yri-hD-dG3" id="0Z8-WN-6Uc"/>
                 <outlet property="loadingTitleLabel" destination="PIg-ul-WZY" id="few-Zd-Egv"/>
                 <outlet property="view" destination="iN0-l3-epB" id="6SJ-Jl-l8X"/>
-                <outlet property="webView" destination="sot-oX-AJ1" id="Fa9-Lc-KuC"/>
+                <outlet property="viewContainer" destination="Cpn-LQ-B02" id="IVr-9g-vhf"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -28,13 +28,10 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sot-oX-AJ1" customClass="USeekWebView">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cpn-LQ-B02" userLabel="View - Web View Container">
                     <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <connections>
-                        <outlet property="delegate" destination="-1" id="24J-j4-wF6"/>
-                    </connections>
-                </webView>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yri-hD-dG3" userLabel="View - Loading Mask">
                     <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                     <subviews>
@@ -67,14 +64,14 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="sot-oX-AJ1" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="2uN-El-F36"/>
+                <constraint firstItem="Cpn-LQ-B02" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0eZ-l2-CwV"/>
                 <constraint firstItem="Yri-hD-dG3" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="4e0-kw-FAY"/>
+                <constraint firstAttribute="bottom" secondItem="Cpn-LQ-B02" secondAttribute="bottom" id="7gO-Kv-8DX"/>
                 <constraint firstItem="Yri-hD-dG3" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="CRS-0Z-1dR"/>
+                <constraint firstItem="Cpn-LQ-B02" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="KhY-3U-yUQ"/>
                 <constraint firstItem="Yri-hD-dG3" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="Tno-3q-Ulo"/>
-                <constraint firstItem="sot-oX-AJ1" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="VQd-el-HZr"/>
-                <constraint firstItem="sot-oX-AJ1" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ZK5-J5-REx"/>
+                <constraint firstAttribute="trailing" secondItem="Cpn-LQ-B02" secondAttribute="trailing" id="YKw-mn-w3O"/>
                 <constraint firstItem="XUL-MK-ox6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="c12-xe-Wig"/>
-                <constraint firstItem="sot-oX-AJ1" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="eG9-4t-4Zk"/>
                 <constraint firstAttribute="trailing" secondItem="XUL-MK-ox6" secondAttribute="trailing" constant="20" id="kkp-SE-wxt"/>
                 <constraint firstItem="Yri-hD-dG3" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="oay-GG-17B"/>
             </constraints>
