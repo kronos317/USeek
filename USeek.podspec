@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'USeek'
-  s.version          = '0.4.0'
+  s.version          = '0.4.1'
   s.summary          = 'USeek Library'
 
 # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ This Pod library is designed to help developers use USeek Library easily.
   s.source           = { :git => 'https://github.com/chrislin89/USeek.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '10.0'
 
   s.source_files = 'USeek/Classes/**/*.{h,m}'
   s.resources = ['USeek/Assets/**/*', 'USeek/Classes/**/*.xib']
