@@ -136,6 +136,7 @@ USeekPlayerViewControllerDelegate defines several useful delegate methods (optio
 
 ```
 
+
 #### How to use USeekPlayerView
 
 USeekPlayerView inherits UIView, thus you can directly add it in storyboard or add as subview programmatically.
