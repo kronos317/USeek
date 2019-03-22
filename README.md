@@ -2,7 +2,7 @@
 <img src="https://static1.squarespace.com/static/592df079893fc0e042b0e585/t/592df28c3e00be8e7a34d733/1498102982326/?format=1500w" alt="Icon"/>
 </p>
 
-[![CI Status](http://img.shields.io/travis/chrislin89/USeek.svg?style=flat)](https://travis-ci.org/chrislin89/USeek)
+[![CI Status](http://img.shields.io/travis/kronos317/USeek.svg?style=flat)](https://travis-ci.org/kronos317/USeek)
 [![Version](https://img.shields.io/cocoapods/v/USeek.svg?style=flat)](http://cocoapods.org/pods/USeek)
 [![License](https://img.shields.io/cocoapods/l/USeek.svg?style=flat)](http://cocoapods.org/pods/USeek)
 [![Platform](https://img.shields.io/cocoapods/p/USeek.svg?style=flat)](http://cocoapods.org/pods/USeek)
@@ -42,7 +42,7 @@ Installation
 [CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like `USeek` in your projects. First, add the following line to your [Podfile](http://guides.cocoapods.org/using/using-cocoapods.html):
 
 ```ruby
-pod 'USeek', :git => 'https://github.com/chrislin89/USeek.git'
+pod 'USeek', :git => 'https://github.com/kronos317/USeek.git'
 ```
 
 This pulls from the `master` branch directly.
@@ -58,7 +58,7 @@ pod install
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate `USeek` into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "chrislin89/USeekFramework"
+github "kronos317/USeekFramework"
 ```
 
 Run `carthage update` to build the framework and drag the built `USeek.framework` (in Carthage/Build/iOS folder) into your Xcode project (Linked Frameworks and Libraries in `Targets`).
@@ -66,7 +66,7 @@ Run `carthage update` to build the framework and drag the built `USeek.framework
 
 #### Manually
 
-* Drag the `chrislin89/USeekFramework` folder into your project.
+* Drag the `kronos317/USeekFramework` folder into your project.
 * Take care that `USeek.framework` is added to `Targets->Build Phases->Embeded Frameworks`.
 
 

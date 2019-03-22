@@ -2,7 +2,7 @@
 //  USeekPlayerView.h
 //  Pods
 //
-//  Created by Chris Lin on 7/19/17.
+//  Created by Kronos on 7/19/17.
 //  Copyright © 2017 USeek. All rights reserved.
 //
 

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'USeek'
-  s.version          = '0.4.1'
+  s.version          = '0.5.0'
   s.summary          = 'USeek Library'
 
 # This description is used to generate tags and improve search results.
@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 This Pod library is designed to help developers use USeek Library easily.
                        DESC
 
-  s.homepage         = 'https://github.com/chrislin89/USeek'
+  s.homepage         = 'https://github.com/kronos317/USeek'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'USEEK', :file => 'LICENSE' }
-  s.author           = { 'chrislin89' => 'chrislin.317@hotmail.com' }
-  s.source           = { :git => 'https://github.com/chrislin89/USeek.git', :tag => s.version.to_s }
+  s.author           = { 'kronos317' => 'kronostech.317@gmail.com' }
+  s.source           = { :git => 'https://github.com/kronos317/USeek.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'

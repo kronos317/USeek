@@ -2,7 +2,7 @@
 //  USeekUtils.m
 //  USeekDemo
 //
-//  Created by Chris Lin on 7/20/17.
+//  Created by Kronos on 7/20/17.
 //  Copyright © 2017 USeek. All rights reserved.
 //
 

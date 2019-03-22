@@ -2,8 +2,8 @@
 //  USeekTests.m
 //  USeekTests
 //
-//  Created by chrislin89 on 07/25/2017.
-//  Copyright (c) 2017 chrislin89. All rights reserved.
+//  Created by Kronos on 07/25/2017.
+//  Copyright (c) 2017 Kronos Tech. All rights reserved.
 //
 
 @import XCTest;
